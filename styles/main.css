@@ -1,0 +1,37 @@
+.active {
+  background: #f1f4f8;
+}
+.active__line {
+  background: linear-gradient(0deg, #2e71f3, #2e71f3),
+    linear-gradient(180deg, #6b2feb 0%, #334ffd 100%), #20003e;
+}
+.wrapperLinks {
+  background: #f1f4f8;
+}
+.wrapperLinks div {
+  background: #f1f4f8;
+}
+.wrapperLinks a {
+  background: #f1f4f8;
+}
+svg {
+  background: inherit;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+svg path {
+  background: inherit;
+  fill: rgba(0, 0, 0, 0.5);
+}
+
+.svgWrapper svg path {
+  background: inherit;
+  fill: rgba(0, 0, 0, 1);
+}
+
+.open {
+  display: block;
+}
+.close {
+  display: none;
+}

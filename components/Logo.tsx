@@ -1,10 +1,11 @@
 import React from 'react';
 import styled from '@emotion/styled';
 import Image from 'next/image';
+import { hide } from './icons';
 
 let Block = styled.div({
   width: '100%',
-  padding: '30px 45px 30px 45px',
+  padding: '15px 25px 15px 25px',
   background: 'inherit',
   display: 'flex',
   flexDirection: 'row',
@@ -13,17 +14,15 @@ let Block = styled.div({
   borderBottom: '1px solid rgba(0, 0, 0, 0.1)',
 });
 
-let ImageWrapper = styled.div({ marginLeft: 11, position: 'relative' });
+export let ImageWrapper = styled.div({ marginLeft: 11, position: 'relative' });
 
 function Logo() {
   return (
     <Block>
       <ImageWrapper>
-        <Image src="/../public/logo.png" alt="Logo" width={130} height={79} />
+        <Image src="/../public/logo.png" alt="Logo" width={120} height={80} />
       </ImageWrapper>
-      <ImageWrapper>
-        <Image src="/../public/iconsHide.png" alt="Logo" width={25} height={25} />
-      </ImageWrapper>
+      <ImageWrapper style={{ cursor: 'pointer' }}>{hide}</ImageWrapper>
     </Block>
   );
 }

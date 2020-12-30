@@ -31,7 +31,7 @@ export default function AppLayout({ children, title }: AppLayoutProps) {
         <meta charSet="utf-8" />
       </Head>
       <Container>
-        <AsideMenu />
+        <AsideMenu title={title} />
         <Main>{children}</Main>
       </Container>
     </>

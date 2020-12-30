@@ -1,88 +1,30 @@
 import React from 'react';
 import styled from '@emotion/styled';
+import LinkElem from './LinkElem';
+import { bar, book, calendary, crm, email, finances, hide, setting, ticket, user } from './icons';
 import Logo from './Logo';
-import Link from 'next/link';
-import Image from 'next/image';
-let ListLinks = [
-  {
-    icon: '/../public/calendary.png',
-    text: 'Занятия',
-    path: '/',
-  },
-  {
-    icon: '/../public/user.png',
-    text: 'Учащиеся',
-    path: '/',
-  },
-  {
-    icon: '/../public/book.png',
-    text: 'Тренеры',
-    path: '/',
-  },
-  {
-    icon: '/../public/ruble.png',
-    text: 'Финансы',
-    path: '/',
-  },
-  {
-    icon: '/../public/ticet.png',
-    text: 'Абонименты',
-    path: '/',
-  },
-  {
-    icon: '/../public/flag.png',
-    text: 'Доступ в CRM',
-    path: '/',
-  },
-  {
-    icon: '/../public/email.png',
-    text: 'Рассылки',
-    path: '/',
-  },
-  {
-    icon: '/../public/bar.png',
-    text: 'Отчеты',
-    path: '/',
-  },
-  {
-    icon: '/../public/settings.png',
-    text: 'Настройки',
-    path: '/',
-  },
-];
 
 let Aside = styled.aside({
   width: '210px',
   height: '100%',
   background: '#fff',
 });
+
 let LinkList = styled.ul({ marginTop: 20 });
-let SingleLink = styled.li({
-  width: '100%',
-  padding: '17px 0px 17px 30px',
-  display: 'flex',
-  justifyContent: '',
-  alignItems: 'center',
-});
-let A = styled.a({
-  fontsize: 13,
-  color: 'rgba(0, 0, 0, 0.5)',
-  position: 'relative',
-  marginLeft: 13,
-});
-function AsideMenu() {
+function AsideMenu({ title }) {
   return (
     <Aside>
       <Logo />
       <LinkList>
-        {ListLinks.map((link) => (
-          <SingleLink>
-            <Image src={link.icon} alt={link.text} width={15} height={15} />
-            <Link href={link.path}>
-              <A>{link.text}</A>
-            </Link>
-          </SingleLink>
-        ))}
+        <LinkElem path="/" image={calendary} title="Занятия" location={title} />
+        <LinkElem path="/disciples" image={user} title="Учащиеся" location={title} />
+        <LinkElem path="/trainers" image={book} title="Тренеры" location={title} />
+        <LinkElem path="/finances" image={finances} title="Финансы" location={title} />
+        <LinkElem path="/subscriptions" image={ticket} title="Абонименты" location={title} />
+        <LinkElem path="/crm" image={crm} title="Доступ в CRM" location={title} />
+        <LinkElem path="/email" image={email} title="Рассылки" location={title} />
+        <LinkElem path="/bar" image={bar} title="Отчеты" _id={8} location={title} />
+        <LinkElem path="/settings" image={setting} title="Настройки" location={title} />
       </LinkList>
     </Aside>
   );
