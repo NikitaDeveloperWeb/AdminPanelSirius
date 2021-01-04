@@ -35,3 +35,7 @@ svg path {
 .close {
   display: none;
 }
+
+.avatarblock div {
+  background: inherit;
+}
