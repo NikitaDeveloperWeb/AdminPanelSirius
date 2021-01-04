@@ -1,5 +1,5 @@
 .active {
-  background: #f1f4f8;
+  background: rgba(237, 240, 245, 1);
 }
 .active__line {
   background: linear-gradient(0deg, #2e71f3, #2e71f3),
@@ -38,4 +38,24 @@ svg path {
 
 .avatarblock div {
   background: inherit;
+}
+
+.activeSortDate {
+  background: #fff !important;
+  color: black !important;
+  font-weight: 500 !important;
+  border: none !important;
+}
+.up {
+  color: rgba(82, 173, 91, 1);
+}
+
+.up svg path {
+  fill: rgba(82, 173, 91, 1);
+}
+.down svg path {
+  fill: rgba(237, 15, 72, 1);
+}
+.down {
+  color: rgba(237, 15, 72, 1);
 }
