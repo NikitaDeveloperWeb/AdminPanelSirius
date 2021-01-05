@@ -59,3 +59,18 @@ svg path {
 .down {
   color: rgba(237, 15, 72, 1);
 }
+
+.iconsInfoBlock svg path {
+  fill: rgb(0, 0, 0);
+}
+.activeInfoblock {
+  background: rgba(46, 113, 243, 1) !important;
+  align-items: 'center' !important;
+  color: #fff !important;
+}
+.activeInfoblock p {
+  color: #fff !important;
+}
+.activeInfoblock .iconsInfoBlock svg path {
+  fill: rgb(255, 255, 255) !important;
+}

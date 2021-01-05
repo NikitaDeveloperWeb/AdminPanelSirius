@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 import SortDateBlock from './SortDateBlock';
 import { down, up } from './icons';
 import Image from 'next/image';
+import GraphDataGrid from './GraphDataGrid';
 
 interface GraphProps {
   revenue: number;
@@ -14,6 +15,7 @@ interface GraphProps {
 let GraphSection = styled.section({
   background: 'rgba(241, 244, 248, 1)',
   paddingLeft: 30,
+  paddingRight: 30,
 });
 let DateIntervalPanel = styled.div({
   background: 'inherit',
@@ -57,6 +59,11 @@ let StatisticData = styled.p({
   marginLeft: 5,
 });
 let Logo = styled.div({});
+let GraphWrapper = styled.div({
+  display: 'flex',
+  width: '100%',
+});
+
 function Graph({ revenue, statistic, statisticDatavalue, logoPath }: GraphProps) {
   const [activeItem, setActiveItem] = React.useState(0);
 
@@ -96,6 +103,9 @@ function Graph({ revenue, statistic, statisticDatavalue, logoPath }: GraphProps)
             <Image src={logoPath} alt="Logo" width={120} height={32} />
           </Logo>
         </GraphHeader>
+        <GraphWrapper>
+          <GraphDataGrid />
+        </GraphWrapper>
       </GraphView>
     </GraphSection>
   );
